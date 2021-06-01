@@ -1,0 +1,275 @@
+
+body {
+    background-color: #1B1B1B;
+}
+
+.watchBody {
+    background-color: #212121;
+    padding: 15px 25px 15px 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    box-shadow: 1px black;
+}
+
+.display {
+    background-color: black;
+    border: 1px solid #3b3b3c;
+    border-bottom: 5px solid #3b3b3c;
+    border-radius: 5px;
+    border-style: inset;
+    display: inline-block;
+    color: #a8e2e2;
+    height: 100px;
+    width: 300px;
+    margin: 10px 5px 5px 10px;
+    animation: glow 1s ease-in-out infinite alternate;
+    
+}
+
+@keyframes glow {
+    from {
+       text-shadow: 0 0 15px #fff;
+    }
+      
+    to {
+        text-shadow: 0 0 15px #fff;
+    }
+  }
+
+@font-face {
+	font-family: 'digiFont';
+	src: url('DS-DIGI.TTF'); 
+	src: 
+		local('Digi Font'),
+		local('Digi-Font'),
+		url('DS-DIGI.TTF') 
+		format('opentype');
+}
+
+.display-icon {
+    height: 40px;
+    margin: 30px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.display-value {
+    font-family: digiFont;
+    font-size: 70px;
+}
+
+.display-unit {
+    font-family: digiFont;
+    font-size: 30px;
+}
+
+.control-buttons {
+    display: inline-block;
+    margin: 10px 5px 5px 5px;
+}
+
+.up-down-buttons-area {
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-style: inset;
+    height: 45px;
+}
+
+.up-down-buttons {
+    margin: 5px 5px 5px 5px;
+    display: inline-block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    border-style: inset;
+    cursor: pointer;
+    background-image: linear-gradient(#3b3b3c, black);
+}
+
+.pwr-button-area {
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-style: inset;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.pwr-button {
+    margin: 7px;
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    border-style: inset;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(#3b3b3c, black);
+}
+
+.pwr-icon {
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pwr-icon-on {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 2px;
+    background-color: #a8e2e2;
+    background-image: radial-gradient(#d4f7f7, #48e6e6);
+    animation: glow 1s ease-in-out infinite alternate;   
+}
+
+.pwr-icon-off {
+    margin: 2px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    animation: glow 1s ease-in-out infinite alternate;   
+    background-color: black;
+}
+
+.control-switches {
+    display: block;
+    height: 50px;
+    width: 395px;
+    margin: 5px 10px 10px 10px;
+}
+
+.slider-area {
+    display: inline;
+}
+
+.slider {
+    -webkit-appearance: none;
+    float:right;
+    width: 70% !important;
+    vertical-align: middle;
+    margin-top: 7px;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    overflow: hidden;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    border-radius: 50%;
+    background-image: radial-gradient(#f3f3d9 0%, #b7b2bd 50%, #8a8a85 100%);
+    cursor: ew-resize;
+    box-shadow: -160px 0 0 160px #43e5f7;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background-color: red;
+    border-radius: 50%;
+    background-image: radial-gradient( #f3f3d9 0%, #b7b2bd 50%, #8a8a85 100%);
+    cursor: ew-resize;
+    box-shadow: -160px 0 0 160px #43e5f7;
+
+}
+
+.switchLabel {
+    color: white;
+}
+
+.switch {
+    vertical-align: middle;
+}
+
+
+.ruler {
+    position: relative;
+    width: 68%;
+    margin: 10px 0 0 130px;
+    height: 14px;
+   }
+.ruler .cm,
+.ruler .mm {
+    position: absolute;
+    border-left: 1px solid #555;
+    height: 14px;
+    width: 10%;
+}
+/* .ruler .cm:after {
+    position: absolute;
+    bottom: -15px;
+    font: 11px/1 sans-serif;
+} */
+.ruler .mm {
+    height: 7px;
+}
+.ruler .cm:nth-of-type(1) {
+    left: 0%;
+}
+.ruler .cm:nth-of-type(2) {
+    left: 10%;
+}
+.ruler .cm:nth-of-type(3) {
+    left: 20%;
+}
+.ruler .cm:nth-of-type(4) {
+    left: 30%;
+}
+.ruler .cm:nth-of-type(5) {
+    left: 40%;
+}
+.ruler .cm:nth-of-type(6) {
+    left: 50%;
+}
+.ruler .cm:nth-of-type(7) {
+    left: 60%;
+}
+.ruler .cm:nth-of-type(8) {
+    left: 70%;
+}
+.ruler .cm:nth-of-type(9) {
+    left: 80%;
+}
+.ruler .cm:nth-of-type(10) {
+    left: 90%;
+}
+.ruler .cm:nth-of-type(11) {
+    left: 100%;
+}
+.ruler .mm:nth-of-type(1) {
+    left: 20%;
+}
+.ruler .mm:nth-of-type(2) {
+    left: 40%;
+}
+.ruler .mm:nth-of-type(3) {
+    left: 60%;
+}
+.ruler .mm:nth-of-type(4) {
+    left: 80%;
+}
+.ruler .mm:nth-of-type(5) {
+    left: 100%;
+}
